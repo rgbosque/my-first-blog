@@ -38,6 +38,14 @@ h1, h2, h3, h4 {
     margin-right: 20px
 }
 
+.top-menu-small-text {
+    color: #ffffff;
+    float: right;
+    font-size: 14pt;
+    margin-right: 20px
+}
+   
+
 .post {
     margin-bottom: 70px;
 }
@@ -46,4 +54,59 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
+.form-login {
+    border: 3px solid #f1f1f1;
+    padding: 14px 20px;
+    width: 50%;
+}
 
+.button-login {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.page-footer {
+    position: relative;
+    background: #ff9400;/* #061D25;*/
+    padding: 10px 0;
+    /*background-color: #ff9400; 
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;*/
+    text-align: left;
+    color: #70726F; 
+
+}
+
+.page-footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.page-footer a:first-child {
+    border-left: 1px solid #70726F;
+}
+
+.page-footer a:hover {
+    color: white;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}

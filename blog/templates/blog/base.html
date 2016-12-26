@@ -1,21 +1,26 @@
 {% load staticfiles %}
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>RGB Django Blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                 <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-                <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                <a href="{% url 'post_list' %}" class="top-menu"><span class="glyphicon glyphicon-home"></span></a>
+                <p class="top-menu-small-text"><small>Hello {{ user.username }}(<a href="{% url 'logout' %}">Log out</a>)</small></p>
             {% else %}
-                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-            {% endif %} 
+                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+                <a href="{% url 'post_list' %}" class="top-menu"><span class="glyphicon glyphicon-home"></span></a>
+            {% endif %}
             <h1><a href="{% url 'post_list' %}">RGB Django Blog</a></h1>
             <p>I'm Rodel Bosque and this is where I write about programming and
             my daily life routine.</p>
@@ -29,5 +34,16 @@
                 </div>
             </div>
         </div>
-    </body>
+
+        <div class="page-footer">
+            <div class="container text-right">
+                <small>Copyright &copy; 2017 RGB Software Lab's</small>
+                <a href="https://www.facebook.com/pythonph"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-skype"></i></a>
+            </div>
+        </div>
+</body>
 </html>
